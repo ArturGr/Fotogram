@@ -1,0 +1,291 @@
+/* Color Variables */
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --blue-header: #082029;
+    --blue-main: #05171E;
+}
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    main{
+        background-color: var(--blue-main);
+        padding: 0px 140px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;            
+        justify-content: center;                
+    }
+    h1{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 86px;                             
+        font-weight: bold;
+        color: var(--white);
+        padding: 25px 0px;
+    }  
+}
+
+.sectionFoto{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Header */
+header {
+    height: 112px;
+    background-color: var(--blue-header);
+    display: flex;
+    align-items: center;
+    padding: 0px 140px;                            
+    flex-shrink: 0;
+    div.wrapper {
+        width: 100%;
+        max-width: 1440px;
+        #logo {
+            img {
+                height: 64px;                       
+            }
+        }
+    }
+}
+
+/* Footer */
+footer {
+    height: 144px;                                  
+    background-color: var(--blue-header);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 140px;                        
+    flex-shrink: 0;
+    div.wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        max-width: 1440px;
+        img {
+            width: 150px;                           
+            }
+        }
+    }
+
+div#fotoalbum.FotoMini{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 1440px;
+    img{
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+        margin: 10px;
+        cursor: pointer;
+        border-style: solid;
+        border-color: var(--white);
+        border-radius: 8px;
+    }
+}
+
+/* Hover zoom effect for thumbnail*/
+.zoom {
+  transition: transform .2s; 
+}
+
+.zoom:hover {
+  transform: scale(1.25); 
+}
+
+/*Dialog properties*/
+.opened{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 550px;
+    border-style: solid;
+    border-color: var(--white);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    background-color: var(--blue-main);
+    header{
+        height: 100px;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    footer{
+        height: 100px;
+        width: 100%;
+        padding: 0;
+        img{
+            width: 150px; 
+        }
+    }
+}
+
+#myDialog{
+    h2{
+        color: var(--white);
+        font-size: 24px;
+        text-align: left;
+        padding-left: 25px;
+    }
+    section{
+        width: 100%;
+    }
+}
+
+#myDialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.7); /* Setting a grayed out, semi-transparent background */
+    backdrop-filter: blur(5px);             /* Blur-effect */
+}
+
+#fotoID{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    img{
+        max-height: 500px;
+        max-width: 500px;
+    }
+}
+
+#CloseImg{
+    img{
+        height: 32px;
+        cursor: pointer;
+        background-color: var(--blue-header);
+        padding-right: 25px;
+    }
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    img{
+        cursor: pointer;
+        height: 32px;
+        padding: 10px 0px;
+    }
+    p{
+        text-align: center;
+        color: var(--white);
+    }
+}
+
+/*** MEDIA QUERIES ***/
+/* === MOBILE STYLES (width to 767px) === */
+@media (max-width: 767.99px) {   
+html{
+    main{
+        padding: 0px 10px;                            
+    }
+    h1{
+        font-size: 44px;                               
+    }
+}
+    
+/* Header */
+header {
+    height: 64px;              
+    padding: 0px 10px;          
+    
+    div.wrapper {
+        #logo {
+            img {
+                height: 32px; 
+            }
+        }
+    }
+}
+
+/* Footer */
+footer {
+    height: 86px;                                 
+    padding: 0px 10px;                             
+    }
+
+#fotoID{
+    img{
+        max-height: 250px;
+        max-width: 250px;
+    }
+}
+#myDialog{
+    h2{
+        font-size: 16px;
+    }
+}
+}
+/**
+/* === TABLET STYLES (width: 768px - 1280px) === */
+@media (min-width: 768px) and (max-width: 1280.9px) {
+html{
+    main{
+        padding: 0px 24px;                            
+    }
+
+    h1{
+        font-size: 72px;                                
+    }
+}
+
+/* Header */
+header {
+    height: 112px;                                  
+    padding: 0px 24px;                             
+    div.wrapper {
+        #logo {
+            img {
+                height: 48px;                       
+            }
+        }
+    }
+}
+
+/* Footer */
+footer {
+    height: 144px;                                  
+    padding: 0px 24px;                             
+    }
+
+#fotoID{
+    img{
+        max-height: 350px;
+        max-width: 350px;
+        }
+    }
+
+#myDialog{
+    h2{
+        font-size: 20px;
+    }
+}
+}
