@@ -13,6 +13,7 @@ const TABLE_OF_FOTO = [
     '"./img/foto/IMG20250831145714.jpg" alt="Blauer Hintersee mit Wald und Alpenpanorama."',
     '"./img/foto/IMG20250920154457.jpg" alt="Dunkelbraunes Eichhörnchen sucht am Waldboden."'
     ];
+
 // Variable    
 let currentFotoID = 0;
 const TABLE_OF_FOTO_REF = document.getElementById("fotoalbum");
@@ -26,7 +27,7 @@ function AddingFoto() {
         TABLE_OF_FOTO_REF.innerHTML += `<img class="zoom" src=${TABLE_OF_FOTO[i]} onclick="openDialog(${i})">`;
         }
     TABLE_OF_FOTO_REF.classList.add("FotoMini");
-    }
+}
  
 //  Function for opening dialog window
 function openDialog(FotoID) {
@@ -50,7 +51,7 @@ function closeDialog() {
     document.getElementById("CloseImg").innerHTML = '';
     document.getElementById("fotoID").innerHTML = '';
     document.getElementById("fotoNav").innerHTML = '';
-    }
+}
 
 // Function for calculating id of next foto
 function NextFoto(value){
@@ -61,6 +62,7 @@ function NextFoto(value){
         return result;
     }
 }
+
 // Function for calculating id of prev foto
 function PrevFoto(value) {
     const result = value - 1;
@@ -69,7 +71,6 @@ function PrevFoto(value) {
     } else {
         return result;
     }
-    
 }
 
 //Function for getting title of foto from img alt
