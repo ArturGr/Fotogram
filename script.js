@@ -56,6 +56,7 @@ function closeDialog() {
 // Function for calculating id of next foto
 function NextFoto(value){
     const result = value + 1;
+
     if (result >= TABLE_OF_FOTO.length) {
         return 0;
     } else {
@@ -66,6 +67,7 @@ function NextFoto(value){
 // Function for calculating id of prev foto
 function PrevFoto(value) {
     const result = value - 1;
+
     if (result < 0) {
         return TABLE_OF_FOTO.length - 1;
     } else {
@@ -76,7 +78,8 @@ function PrevFoto(value) {
 //Function for getting title of foto from img alt
 function GetTitle(value) {
     const regex = /alt="(.+?)"/;
-    const match = TABLE_OF_FOTO[value].match(regex);    
+    const match = TABLE_OF_FOTO[value].match(regex);
+
     if (match.length > 1 && match[1].length > 0) {
         return match[1]; 
     } else {
@@ -87,7 +90,8 @@ function GetTitle(value) {
 //Function for getting source of foto from img src
 function GetFotoSource(value) {
     const regex = /^"(.+?)"/;
-    const match = TABLE_OF_FOTO[value].match(regex);    
+    const match = TABLE_OF_FOTO[value].match(regex);
+        
     if (match.length > 1 && match[1].length > 0) {
         return match[1]; 
     } else {

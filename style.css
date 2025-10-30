@@ -219,6 +219,7 @@ html{
         font-size: 44px;                               
     }
 }
+
 .opened{
     width: 270px;
 }
@@ -227,7 +228,6 @@ html{
 header {
     height: 64px;              
     padding: 0px 10px;          
-    
     div.wrapper {
         #logo {
             img {
@@ -250,6 +250,7 @@ footer {
         margin-top: 25px;
     }
 }
+
 #myDialog{
     h2{
         font-size: 16px;
@@ -268,6 +269,7 @@ html{
         font-size: 72px;                                
     }
 }
+
 .opened{
     width: 400px;
 }
