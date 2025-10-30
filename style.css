@@ -174,8 +174,10 @@ div#fotoalbum.FotoMini{
     align-content: center;
     flex-wrap: nowrap;
     img{
-        max-height: 500px;
-        max-width: 500px;
+        object-fit: cover;
+        height: 500px;
+        width: 500px;
+        margin-top: 25px;
     }
 }
 
@@ -217,6 +219,9 @@ html{
         font-size: 44px;                               
     }
 }
+.opened{
+    width: 270px;
+}
     
 /* Header */
 header {
@@ -240,8 +245,9 @@ footer {
 
 #fotoID{
     img{
-        max-height: 250px;
-        max-width: 250px;
+        height: 220px;
+        width: 220px;
+        margin-top: 25px;
     }
 }
 #myDialog{
@@ -261,6 +267,9 @@ html{
     h1{
         font-size: 72px;                                
     }
+}
+.opened{
+    width: 400px;
 }
 
 /* Header */
@@ -284,8 +293,9 @@ footer {
 
 #fotoID{
     img{
-        max-height: 350px;
-        max-width: 350px;
+        height: 350px;
+        width: 350px;
+        margin-top: 25px;
         }
     }
 
